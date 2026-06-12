@@ -31,7 +31,7 @@ body {
 /* ======== SELLO ======== */
 .seal {
   position: absolute;
-  bottom: 110px; /* 🔹 ajustado al pico del sobre */
+  bottom: 160px; /* 🔹 ajustado al pico del sobre */
   left: 50%;
   transform: translateX(-50%);
   width: 180px;
