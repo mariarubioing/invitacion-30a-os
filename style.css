@@ -18,24 +18,24 @@ body {
   overflow: visible; /* 🔹 permite que el sobre grande se muestre completo */
 }
 
-/* 🔸 SOBRE GRANDE */
 .envelope {
   position: relative;
-  width: 90vw; /* 🔹 ocupa el 90% del ancho de la ventana */
-  height: calc(90vw * 2 / 3); /* mantiene proporción 3:2 (1536x1024) */
+  width: 1536px;
+  height: 1024px;
   background-image: url('sobre.png');
-  background-size: contain;
+  background-size: 100% 100%; /* 🔹 fuerza el fondo a ocupar todo el contenedor */
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
 }
 
+/* 🔸 SELLO AJUSTADO AL PICO */
 .seal {
   position: absolute;
-  top: 70%; /* 🔹 bajado para coincidir con el pico del sobre */
+  top: 68%; /* 🔹 ahora sí baja hasta el vértice del triángulo */
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180px; /* tamaño proporcional al sobre grande */
+  width: 180px;
   height: 180px;
   background-image: url('sello.png');
   background-size: contain;
@@ -47,6 +47,7 @@ body {
 .seal:active {
   transform: translate(-50%, -50%) scale(0.9);
 }
+
 
 
 /* ======== ANIMACIÓN AL ABRIR ======== */
