@@ -7,23 +7,16 @@ body {
 }
 
 /* ======== CONTENEDOR DEL SOBRE ======== */
-.envelope-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.envelope-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
 }
 
 /* ======== SOBRE ======== */
-.envelope {
-  position: relative;
-  width: 1536px;
-  height: 1024px;
-  margin: 0 auto;
-}
-
 .sobre-img {
   width: 100%;
+  max-width: 1536px;
   height: auto;
   display: block;
 }
@@ -31,9 +24,9 @@ body {
 /* ======== SELLO ======== */
 .seal {
   position: absolute;
-  bottom: 80px; /* 🔹 ajustado al pico del sobre */
   left: 50%;
   transform: translateX(-50%);
+  bottom: 13%; /* 🔹 ajustado al pico del sobre */
   width: 180px;
   height: 180px;
   background-image: url('sello.png');
@@ -86,5 +79,4 @@ body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 
