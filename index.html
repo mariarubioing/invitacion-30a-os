@@ -1,68 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación Juan Francisco & Gema</title>
-
-    <!-- Tipografía elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación Juan Francisco & Gema</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Música romántica -->
-<audio id="music" src="musica-romantica.mp3" preload="auto"></audio>
-
-<div class="envelope-container" id="envelope">
-    <div class="envelope">
-        <div class="flap"></div>
-        <div class="paper" id="paper">
-            <h2>Juan Francisco & Gema</h2>
-            <p>12 de Septiembre</p>
-            <p>Toca el sello para abrir</p>
-        </div>
-        <div class="seal" id="seal">J&G</div>
+  <div class="envelope-container">
+    <div class="envelope" id="envelope">
+      <div class="seal" id="seal"></div>
+      <div class="paper" id="paper"></div>
     </div>
-</div>
+  </div>
 
-<!-- Contenido de la invitación -->
-<div class="invitation hidden" id="invitation">
+  <div class="invitation hidden" id="invitation">
     <h1>Juan Francisco & Gema</h1>
-    <h2>12 de Septiembre</h2>
+    <h2>30º Aniversario</h2>
+    <p>Nos hace mucha ilusión celebrar con vosotros este día tan especial.</p>
+    <p>📍 <strong>Restaurante El Olivar</strong> — Valdepeñas</p>
+    <p>🕓 <strong>Sábado 5 de julio, 21:00 h</strong></p>
+    <p>🎩 Dress code: elegante</p>
 
-    <h3>Celebramos nuestro 30 aniversario de casados</h3>
-
-    <p>Nos hace mucha ilusión invitarte a celebrar con nosotros un día tan especial.</p>
-
-    <h3>Ceremonia y celebración</h3>
-    <p><strong>Finca en Torrenueva</strong></p>
-    <p>(Añadiremos ubicación exacta más adelante)</p>
-
-    <h3>Dress Code</h3>
-    <p>Elegante</p>
-
-    <h3>Confirmación</h3>
     <div class="whatsapp-box">
-        <p>Elige a quién confirmar:</p>
-
-        <a class="whatsapp" href="https://wa.me/34609494435" target="_blank">
-            <span class="wa-icon">🟢</span> Confirmar con Juan Francisco
-        </a>
-
-        <a class="whatsapp" href="https://wa.me/34619406652" target="_blank">
-            <span class="wa-icon">🟢</span> Confirmar con Gema
-        </a>
+      <a class="whatsapp" href="https://wa.me/34619406652" target="_blank">
+        <span class="wa-icon">💬</span> Confirmar asistencia (Juan Francisco)
+      </a>
+      <a class="whatsapp" href="https://wa.me/3460949435" target="_blank">
+        <span class="wa-icon">💬</span> Confirmar asistencia (Gema)
+      </a>
     </div>
 
-    <h3>Nuestra historia</h3>
-    <p>Gracias por acompañarnos en este día tan importante.</p>
-</div>
+    <audio controls autoplay loop>
+      <source src="musica-romantica.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
