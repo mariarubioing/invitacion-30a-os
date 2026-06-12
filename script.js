@@ -6,19 +6,13 @@ const invitation = document.getElementById("invitation");
 const music = document.getElementById("music");
 
 seal.addEventListener("click", () => {
-    // Abrir solapa
     flap.style.transform = "rotateX(-180deg)";
+    paper.style.opacity = "1";
 
-    // Sacar la carta
-    setTimeout(() => {
-        paper.style.opacity = "1";
-        paper.style.transform = "translateY(-140px)";
-    }, 800);
-
-    // Mostrar invitación
     setTimeout(() => {
         envelope.style.display = "none";
         invitation.classList.remove("hidden");
         music.play();
-    }, 2000);
+    }, 1500);
 });
+
