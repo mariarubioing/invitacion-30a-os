@@ -26,7 +26,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 17%; /* 🔹 ajustado al pico del sobre */
+  bottom: 25%; /* 🔹 ajustado al pico del sobre */
   width: 180px;
   height: 180px;
   background-image: url('sello.png');
