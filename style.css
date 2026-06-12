@@ -1,11 +1,13 @@
 .envelope {
   position: relative;
-  width: 380px;
-  height: auto;
+  width: 1536px;
+  height: 1024px; /* 🔹 añade una altura fija */
   background-image: url('sobre.png');
   background-size: cover;
   background-position: center;
+  margin: 0 auto;
 }
+
 
 .seal {
   position: absolute;
