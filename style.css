@@ -21,8 +21,8 @@ body {
 
 .envelope {
   position: relative;
-  width: 768px; /* 🔹 mitad del tamaño real para adaptarlo a pantalla */
-  height: 512px; /* mantiene proporción 3:2 exacta */
+  width: 1536px; /* tamaño real del sobre */
+  height: 1024px; /* mantiene proporción exacta */
   background-image: url('sobre.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -33,11 +33,11 @@ body {
 /* 🔸 Ajuste fino del sello */
 .seal {
   position: absolute;
-  top: 46%; /* centrado sobre la solapa del sobre */
+  top: 47.5%; /* centrado justo sobre la solapa */
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120px; /* tamaño proporcional al sobre */
-  height: 120px;
+  width: 180px; /* tamaño proporcional al sobre grande */
+  height: 180px;
   background-image: url('sello.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -48,6 +48,7 @@ body {
 .seal:active {
   transform: translate(-50%, -50%) scale(0.9);
 }
+
 
 
 /* ======== PAPEL INTERIOR ======== */
