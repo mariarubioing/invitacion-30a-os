@@ -11,17 +11,9 @@ body {
 /* ======== CONTENEDOR DEL SOBRE ======== */
 
 .envelope-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: visible; /* 🔹 permite que el sobre grande se muestre completo */
-}
-
-.envelope {
   position: relative;
   width: 1536px;
-  height: 1024px;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -34,9 +26,9 @@ body {
 /* 🔸 SELLO AJUSTADO AL PICO REAL */
 .seal {
   position: absolute;
-  top: 83%; /* 🔹 ajustado al vértice del sobre */
+  bottom: 120px; /* 🔹 distancia desde el borde inferior del sobre */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 180px;
   height: 180px;
   background-image: url('sello.png');
@@ -47,8 +39,9 @@ body {
 }
 
 .seal:active {
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translateX(-50%) scale(0.9);
 }
+
 
 
 /* ======== ANIMACIÓN AL ABRIR ======== */
