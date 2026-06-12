@@ -30,14 +30,13 @@ body {
   margin: 0 auto;
 }
 
-/* 🔸 SELLO AJUSTADO */
 .seal {
   position: absolute;
-  top: 47.5%; /* centrado sobre la solapa */
+  top: 52%; /* 🔹 bajado para coincidir con el pico del sobre */
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 12vw; /* 🔹 tamaño proporcional al sobre grande */
-  height: 12vw;
+  width: 180px; /* tamaño proporcional al sobre grande */
+  height: 180px;
   background-image: url('sello.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -49,16 +48,6 @@ body {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
-/* ======== PAPEL INTERIOR ======== */
-
-.paper {
-  position: absolute;
-  width: 90%;
-  left: 5%;
-  top: 60%;
-  opacity: 0;
-  transition: opacity 1s ease, top 1s ease;
-}
 
 /* ======== ANIMACIÓN AL ABRIR ======== */
 
