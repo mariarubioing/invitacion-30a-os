@@ -32,7 +32,7 @@ body {
 
 .seal {
   position: absolute;
-  top: 55%; /* 🔹 bajado para coincidir con el pico del sobre */
+  top: 70%; /* 🔹 bajado para coincidir con el pico del sobre */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 180px; /* tamaño proporcional al sobre grande */
