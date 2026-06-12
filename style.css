@@ -15,14 +15,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: visible; /* 🔹 permite que el sobre grande se muestre completo */
 }
 
-/* ======== SOBRE PNG ======== */
-
+/* 🔸 SOBRE GRANDE */
 .envelope {
   position: relative;
-  width: 1536px; /* tamaño real del sobre */
-  height: 1024px; /* mantiene proporción exacta */
+  width: 90vw; /* 🔹 ocupa el 90% del ancho de la ventana */
+  height: calc(90vw * 2 / 3); /* mantiene proporción 3:2 (1536x1024) */
   background-image: url('sobre.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -30,14 +30,14 @@ body {
   margin: 0 auto;
 }
 
-/* 🔸 Ajuste fino del sello */
+/* 🔸 SELLO AJUSTADO */
 .seal {
   position: absolute;
-  top: 47.5%; /* centrado justo sobre la solapa */
+  top: 47.5%; /* centrado sobre la solapa */
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180px; /* tamaño proporcional al sobre grande */
-  height: 180px;
+  width: 12vw; /* 🔹 tamaño proporcional al sobre grande */
+  height: 12vw;
   background-image: url('sello.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -48,8 +48,6 @@ body {
 .seal:active {
   transform: translate(-50%, -50%) scale(0.9);
 }
-
-
 
 /* ======== PAPEL INTERIOR ======== */
 
