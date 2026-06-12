@@ -32,7 +32,7 @@ body {
 /* 🔸 SELLO AJUSTADO AL PICO */
 .seal {
   position: absolute;
-  top: 68%; /* 🔹 ahora sí baja hasta el vértice del triángulo */
+  top: 53%; /* 🔹 ahora sí baja hasta el vértice del triángulo */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 180px;
