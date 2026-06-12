@@ -22,17 +22,19 @@ body {
   position: relative;
   width: 1536px;
   height: 1024px;
-  background-image: url('sobre.png');
-  background-size: 100% 100%; /* 🔹 fuerza el fondo a ocupar todo el contenedor */
-  background-repeat: no-repeat;
-  background-position: center;
   margin: 0 auto;
 }
 
-/* 🔸 SELLO AJUSTADO AL PICO */
+.sobre-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔸 SELLO AJUSTADO AL PICO REAL */
 .seal {
   position: absolute;
-  top: 40%; /* 🔹 ahora sí baja hasta el vértice del triángulo */
+  top: 72%; /* 🔹 ajustado al vértice del sobre */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 180px;
@@ -47,7 +49,6 @@ body {
 .seal:active {
   transform: translate(-50%, -50%) scale(0.9);
 }
-
 
 
 /* ======== ANIMACIÓN AL ABRIR ======== */
