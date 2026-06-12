@@ -34,7 +34,7 @@ body {
 /* 🔸 SELLO AJUSTADO AL PICO REAL */
 .seal {
   position: absolute;
-  top: 72%; /* 🔹 ajustado al vértice del sobre */
+  top: 83%; /* 🔹 ajustado al vértice del sobre */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 180px;
