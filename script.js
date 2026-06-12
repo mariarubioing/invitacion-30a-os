@@ -1,14 +1,8 @@
-const seal = document.getElementById("seal");
-const envelope = document.getElementById("envelope");
-const invitation = document.getElementById("invitation");
+const seal = document.querySelector('.seal');
+const invitation = document.querySelector('.invitation');
 
-seal.addEventListener("click", () => {
-  envelope.classList.add("open");
-
-  setTimeout(() => {
-    envelope.style.display = "none";
-    invitation.classList.remove("hidden");
-  }, 1200);
+seal.addEventListener('click', () => {
+  seal.style.opacity = '0';
+  invitation.classList.remove('hidden');
 });
-
 

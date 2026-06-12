@@ -1,5 +1,3 @@
-/* ======== ESTILOS GENERALES ======== */
-
 body {
   margin: 0;
   font-family: "Cormorant", serif;
@@ -9,11 +7,18 @@ body {
 }
 
 /* ======== CONTENEDOR DEL SOBRE ======== */
-
 .envelope-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ======== SOBRE ======== */
+.envelope {
   position: relative;
   width: 1536px;
-  height: auto;
+  height: 1024px;
   margin: 0 auto;
 }
 
@@ -23,10 +28,10 @@ body {
   display: block;
 }
 
-/* 🔸 SELLO AJUSTADO AL PICO REAL */
+/* ======== SELLO ======== */
 .seal {
   position: absolute;
-  bottom: 120px; /* 🔹 distancia desde el borde inferior del sobre */
+  bottom: 110px; /* 🔹 ajustado al pico del sobre */
   left: 50%;
   transform: translateX(-50%);
   width: 180px;
@@ -42,21 +47,7 @@ body {
   transform: translateX(-50%) scale(0.9);
 }
 
-
-
-/* ======== ANIMACIÓN AL ABRIR ======== */
-
-.open .seal {
-  opacity: 0;
-}
-
-.open .paper {
-  opacity: 1;
-  top: 10%;
-}
-
 /* ======== INVITACIÓN ======== */
-
 .invitation {
   padding: 40px 20px;
   max-width: 600px;
@@ -68,8 +59,7 @@ body {
   display: none;
 }
 
-/* ======== BOTONES WHATSAPP ======== */
-
+/* ======== WHATSAPP ======== */
 .whatsapp-box {
   margin-top: 20px;
 }
@@ -91,8 +81,7 @@ body {
   margin-right: 8px;
 }
 
-/* ======== ANIMACIONES ======== */
-
+/* ======== ANIMACIÓN ======== */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
