@@ -1,9 +1,10 @@
 body {
   margin: 0;
   font-family: "Cormorant", serif;
-  background: #f7f3ef;
-  color: #4a3b32;
+  background: #4A0E1F;
+  color: #f2e9e4;
   text-align: center;
+  font-size: 22px; /* más grande */
 }
 
 /* ======== CONTENEDOR DEL SOBRE ======== */
@@ -21,30 +22,159 @@ body {
   display: block;
 }
 
+.sobre-fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
 /* ======== SELLO ======== */
 /* 🔹 Escala del sello en móviles */
 @media (max-width: 768px) {
   .seal {
-    width: 18vw;  /* tamaño relativo al ancho de pantalla */
+    width: 18vw;
     height: 18vw;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 57%;
   }
 }
 
 
-.seal:active {
-  transform: translateX(-50%) scale(0.9);
+/* ======== SELLO (definición base) ======== */
+.seal {
+  position: absolute;
+  width: 12vw;   /* proporcional al sobre */
+  height: 12vw;
+  background-image: url("sello.png");
+  background-size: cover;
+  background-position: center;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
+
+.seal.fade-out {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
 
 /* ======== INVITACIÓN ======== */
 .invitation {
-  padding: 40px 20px;
-  max-width: 600px;
+  padding: 60px 40px;
+  max-width: 700px;
   margin: 40px auto;
+  background-image: url("textura-papel.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.4);
   animation: fadeIn 1.5s ease forwards;
 }
+
+.invitation h1,
+.invitation p {
+  color: #2b1f1f; /* marrón oscuro elegante */
+  text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+}
+
+.titulo-caligrafico-romantico {
+  font-family: "Great Vibes", cursive;
+  font-size: 64px;
+  font-weight: 400;
+  color: #3a1f1f;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  text-shadow:
+    0 2px 3px rgba(255,255,255,0.85),
+    0 0 14px rgba(0,0,0,0.15);
+}
+
+.titulo-caligrafico-romantico .inicial {
+  font-size: 86px;
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(6px);
+  padding: 0 4px;
+}
+
+.titulo-simetrico {
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+  color: #3a1f1f;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.titulo-simetrico .inicial {
+  font-size: 90px;
+  line-height: 0.8;
+  text-shadow:
+    0 2px 3px rgba(255,255,255,0.85),
+    0 0 14px rgba(0,0,0,0.15);
+}
+
+.titulo-simetrico .nombre {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.titulo-simetrico .ampersand {
+  font-size: 80px;
+  line-height: 0.8;
+  margin: 0 10px;
+  text-shadow:
+    0 2px 3px rgba(255,255,255,0.85),
+    0 0 14px rgba(0,0,0,0.15);
+}
+
+
+
+/* H2 caligráfico */
+.invitation h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  color: #3a1f1f;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  text-shadow:
+    0 2px 3px rgba(255,255,255,0.85),
+    0 0 12px rgba(0,0,0,0.15);
+}
+
+/* H3 caligráfico */
+.invitation h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  color: #3a1f1f;
+  text-align: center;
+  margin-top: 28px;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  text-shadow:
+    0 2px 3px rgba(255,255,255,0.85),
+    0 0 12px rgba(0,0,0,0.15);
+}
+
+
 
 .hidden {
   display: none;
@@ -72,9 +202,119 @@ body {
   margin-right: 8px;
 }
 
+/* Contenedor doble */
+.whatsapp-box.doble {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+/* Botones */
+.whatsapp {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 28px;
+  background-color: #25d366;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Cormorant", serif;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover elegante */
+.whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Icono */
+.wa-icon {
+  font-size: 20px;
+}
+
+/* Colores personalizados (opcional) */
+.whatsapp.jf {
+  background-color: #1e9e57;
+}
+
+.whatsapp.gema {
+  background-color: #2acb72;
+}
+
+
 /* ======== ANIMACIÓN ======== */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+.tap-text {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #f5d7d7; /* tono claro que combina con vino tinto */
+  animation: blink 1.2s infinite;
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.map-box {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.map-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #3a1f1f;
+  color: #f5e6d3;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-family: "Cormorant", serif;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+
+.calendar-box {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.calendar-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #6a4a3c;
+  color: #f5e6d3;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-family: "Cormorant", serif;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calendar-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
