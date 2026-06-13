@@ -24,10 +24,17 @@ seal.addEventListener('click', () => {
 
         // 6. Mostrar la invitación
         invitation.classList.remove('hidden');
+
+        // 🔊 REPRODUCIR MÚSICA AQUÍ
+        const musica = document.getElementById('musica');
+        musica.volume = 0.6; // volumen suave
+        musica.play();
+
       }, 800); // duración del fade del sobre
 
     }, 1600); // ⭐ PAUSA CINEMATOGRÁFICA (1.6s)
 
   }, 400); // fade del sello
 });
+
 
