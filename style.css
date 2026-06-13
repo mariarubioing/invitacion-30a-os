@@ -22,19 +22,17 @@ body {
 }
 
 /* ======== SELLO ======== */
-.seal {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 25%; /* 🔹 ajustado al pico del sobre */
-  width: 180px;
-  height: 180px;
-  background-image: url('sello.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  transition: transform 0.4s ease, opacity 0.6s ease;
+/* 🔹 Escala del sello en móviles */
+@media (max-width: 768px) {
+  .seal {
+    width: 18vw;  /* tamaño relativo al ancho de pantalla */
+    height: 18vw;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
+
 
 .seal:active {
   transform: translateX(-50%) scale(0.9);
