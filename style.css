@@ -332,3 +332,28 @@ body {
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+
+  .countdown-box h2 {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .countdown-values {
+    gap: 10px;
+  }
+
+  .countdown-values div {
+    padding: 10px 12px;
+    min-width: 55px;
+  }
+
+  .countdown-values span {
+    font-size: 20px;
+  }
+
+  .countdown-values small {
+    font-size: 12px;
+  }
+}
+
