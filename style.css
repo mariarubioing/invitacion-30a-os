@@ -284,11 +284,20 @@ body {
 }
 
 .imagen-boda {
-  display: block;
-  width: 80%;
+  width: 100%;
   max-width: 500px;
-  margin: 40px auto 20px auto;
-  border-radius: 12px;
+  height: auto;
+  display: block;
+  margin: 40px auto 0 auto;
+}
+
+
+@media (max-width: 768px) {
+  .imagen-boda {
+    max-height: 45vh; /* limita la altura visible */
+    object-fit: cover; /* recorta suavemente si hace falta */
+    border-radius: 12px;
+  }
 }
 
 .countdown-box {
