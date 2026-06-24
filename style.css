@@ -300,60 +300,59 @@ body {
   }
 }
 
-.countdown-box {
-  text-align: center;
-  margin: 40px auto;
-  font-family: "Cormorant", serif;
-  color: #6a4a3c;
-}
-
-.countdown-box h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
+/* ======== ESTILO RELOJ DIGITAL ELEGANTE ======== */
 .countdown-values {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 8px;
+  flex-wrap: nowrap;
 }
 
 .countdown-values div {
-  background: #f5e6d3;
-  padding: 15px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  min-width: 70px;
+  background: #4A0E1F;            /* tu color de fondo */
+  color: #ffffff;                 /* números blancos */
+  padding: 10px 12px;
+  border-radius: 6px;
+  min-width: 55px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.35); /* brillo suave */
+  font-family: "Courier New", monospace; /* estilo digital */
+  border: 1px solid rgba(255,255,255,0.25); /* borde sutil */
 }
 
 .countdown-values span {
-  display: block;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
+.countdown-values small {
+  font-size: 11px;
+  display: block;
+  margin-top: 2px;
+  color: #f2e9e4; /* tono claro que combina con tu paleta */
+}
 
-  .countdown-box h2 {
-    font-size: 22px;
-    margin-bottom: 14px;
-  }
-
-  .countdown-values {
-    gap: 10px;
-  }
+/* ======== VERSIÓN COMPACTA PARA MÓVIL ======== */
+@media (max-width: 480px) {
 
   .countdown-values div {
-    padding: 10px 12px;
-    min-width: 55px;
+    padding: 6px 8px;
+    min-width: 45px;
+    border-radius: 5px;
   }
 
   .countdown-values span {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .countdown-values small {
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  .countdown-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 }
+
 
